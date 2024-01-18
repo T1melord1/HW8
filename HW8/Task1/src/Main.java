@@ -4,6 +4,9 @@ public class Main {
 //   functions.createMass();
 //        int[] mass = functions.createMass();
 //        functions.printMassFromEnd(mass);
-        functions.weightOfThePeople();
+//        functions.weightOfThePeople();
+//        System.out.println(OOP.input);
+        OOP.mass();
     }
+
 }
