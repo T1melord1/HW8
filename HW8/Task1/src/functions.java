@@ -3,9 +3,11 @@ import java.util.Scanner;
 
 public class functions {
     public static void createMass() {
-       Scanner scanner = new Scanner(System.in);
-       int razmer = scanner.nextInt();
+        System.out.println("Введите размерность массива");
+        Scanner scanner = new Scanner(System.in);
+        int razmer = scanner.nextInt();
         int[] mass = new int[razmer];
+        System.out.println("Заполните массив размерностью" + razmer);
         for (int i = 0; i < mass.length ; i++) {
             int chislo = scanner.nextInt();
             mass[i] = chislo;
