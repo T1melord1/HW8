@@ -39,13 +39,26 @@ public class functions {
         Random random = new Random();
         int allWeight = 0;
         int averageWeight = 0;
-        for (int i = 1; i <= people ; i++) {
+        int averageWeightFromInterval = 0;
+        int count = 0;
+        int[] mass = new int[10];
+        for (int i = 0; i < people ; i++) {
         int weight = 40 + random.nextInt(61);
-            System.out.println("Вес человека " + (i) +": " + weight + " кг");
+            System.out.println("Вес человека " + (i+1) +": " + weight + " кг");
             allWeight += weight;
+            mass[i]=weight;
         }
     averageWeight = allWeight / people;
         System.out.println("Средний вес всех " + people +" людей: " + averageWeight);
+        for (int i = 0; i < mass.length ; i++) {
+            if(mass[i]>=60 && mass[i]<=80 )
+            {
+                averageWeightFromInterval += mass[i];
+                count++;
+            }
+
+        }
+        System.out.println("Количество людей у которых вес находится в промежутке от 60 до 80 кг включительно: " + count);
     }
 }
 
